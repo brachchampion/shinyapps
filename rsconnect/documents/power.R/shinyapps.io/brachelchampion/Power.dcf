@@ -1,12 +1,13 @@
-name: shiny
-title: shiny
+name: Power
+title: Power
 username:
 account: brachelchampion
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 815194
-bundleId: 3696750
-url: https://brachelchampion.shinyapps.io/shiny/
-when: 1601672391.45943
+appId: 794784
+bundleId: 5209237
+url: https://brachelchampion.shinyapps.io/Power/
+when: 1635971780.99487
+lastSyncTime: 1635971780.99488
 asMultiple: FALSE
 asStatic: FALSE
