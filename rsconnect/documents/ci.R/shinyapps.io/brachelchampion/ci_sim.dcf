@@ -1,0 +1,13 @@
+name: ci_sim
+title: ci_sim
+username:
+account: brachelchampion
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5054411
+bundleId: 5218376
+url: https://brachelchampion.shinyapps.io/ci_sim/
+when: 1636130980.32779
+lastSyncTime: 1636130980.3278
+asMultiple: FALSE
+asStatic: FALSE
