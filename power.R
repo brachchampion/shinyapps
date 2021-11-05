@@ -23,7 +23,7 @@ ui <- fluidPage(
                   "Alternative Hypothesis (\\( \\mu_a \\))",
                   min = 0,
                   max = 5,
-                  value = 0,
+                  value = 1,
                   step = .1,
                   animate = animationOptions(interval = 150, loop = FALSE))
     ),
