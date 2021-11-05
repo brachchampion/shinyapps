@@ -9,8 +9,8 @@ ui <- fluidPage(
       # Slider for sample size
       sliderInput("sample_size","Sample Size",1000, 
                   min = 100, 
-                  max = 10000, 
-                  step = 10),
+                  max = 5000, 
+                  step = 100),
       # Slide for number of samples
       sliderInput("num_samples", "Number of Samples", 50, 
                   min = 10, 
@@ -66,14 +66,14 @@ server <- function(input, output) {
     )+ 
     scale_color_manual(values=c("TRUE"="blue","FALSE"="red"))+
     guides(col=FALSE)+
-    labs(title="Confidence Intervals of Sample Mean From Std. Normal Distribution", x="Sample Number",y="")+
+    labs(title="Confidence Intervals of Sample Mean \n From Std. Normal Distribution", x="Sample Number",y="")+
     geom_hline(yintercept=pop_mean, col="black",lty=2)+
-    theme_classic()+
-    annotate(geom="text", x=num_samples/2, y=min(CI[,1])-abs(min(CI[,1]))/4, 
+    theme_classic(base_size = 18)+
+    annotate(geom="text", x=num_samples/2, y=-pop_sd/2, 
              label=paste(toString(round(mean(is_mu_in_CI),4)*100),
                          "% of confidence intervals contain the population mean",sep=""),
-             color="black")+
-    coord_cartesian(ylim = c(min(CI[,1])-abs(min(CI[,1]))/2,max(CI[,2])+abs(max(CI[,2]))/2))
+             color="black", size = 6)+
+    coord_cartesian(ylim = c(-pop_sd/2,pop_sd/2))
   })
 }
 # Run the application 
